@@ -58,7 +58,7 @@ app.patch('/movies/:id', (req,res) => {
     Movie.findOneAndUpdate({_id: req.params.id}, {
         $set: req.body
     }).then(() => {
-        res.sendStatus(200);
+        res.send({message: "Updated successfully!",});
     })
 })
 
@@ -106,7 +106,7 @@ app.patch('/books/:id', (req,res) => {
     Book.findOneAndUpdate({_id: req.params.id}, {
         $set: req.body
     }).then(() => {
-        res.sendStatus(200);
+        res.send({message: "Updated successfully!",});
     })
 })
 
@@ -150,7 +150,7 @@ app.patch('/hobbies/:id', (req,res) => {
     Hobby.findOneAndUpdate({_id: req.params.id}, {
         $set: req.body
     }).then(() => {
-        res.sendStatus(200);
+        res.send({message: "Updated successfully!",});
     })
 })
 
